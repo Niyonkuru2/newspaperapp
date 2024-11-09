@@ -1,0 +1,108 @@
+@host = 127.0.0.1:8000
+####
+GET http://{{host}}/api/users/ HTTP/1.1
+
+#### Send a request with a body
+POST http://{{host}}/api/users/create
+Content-Type: application/json
+
+  {
+    "name":"Nguahujin Chechua",
+    "email":"nguahujinchechu@gmail.com",
+    "phone":"098765434"
+  }
+### Get individual user
+GET http://{{host}}/api/users/12
+#### delete request
+DELETE http://{{host}}/api/users/12
+### PUT
+PUT http://{{host}}/api/users/12
+
+Content-Type: application/json
+
+  {
+    "name":"Joakim Chechua",
+    "email":"joakimhechua@gmail.com",
+    "phone":"0987654567"
+  }
+
+####
+GET http://{{host}}/api/authors/
+
+####
+POST http://{{host}}/api/authors/create/
+Content-Type: application/json
+
+  {
+    "name":"Joakim Chechua",
+    "email":"joakimhechua@gmail.com",
+    "phone":"0987654567",
+    "news_paper_name":"The New Times"
+  }
+### Get individual Author
+GET http://{{host}}/api/author/1
+
+PUT http://{{host}}/api/authors/1
+Content-Type: application/json
+
+  {
+    "name":"Joakim klai",
+    "email":"joakimhechua@gmail.com",
+    "phone":"0987654567",
+    "news_paper_name":"The New Times"
+  }
+
+####
+DELETE PUT http://{{host}}/api/authors/3
+
+####
+GET http://{{host}}/api/articles/
+
+####
+POST http://{{host}}/api/articles/create
+Content-Type: application/json
+ {
+        "id": 1,
+        "title": "Africa",
+        "content": "Africa continent is the best continent on the world which has 54 countries",
+        "published_date": "2024-11-08",
+        "author": 2
+    }
+  
+### Get individual article
+GET http://{{host}}/api/article/1
+
+####
+PUT http://{{host}}/api/articles/1
+Content-Type: application/json
+ {
+        "id": 1,
+        "title": "Africa the second continent in large",
+        "content": "Europe continent it is the second largest continent on the world which has 54 countries",
+        "published_date": "2024-11-08",
+        "author": 2
+    }
+
+### 
+DELETE http://{{host}}/api/articles/1
+
+####
+GET http://{{host}}/api/comments
+
+####
+POST http://{{host}}/api/comments/create/
+Content-Type: application/json
+{
+        "id": 1,
+        "content": "Good update",
+        "created_At": "2024-11-08",
+        "article": 1,
+        "user": 2
+}
+### Get individual comment
+GET http://{{host}}/api/comment/1
+
+####
+PUT http://{{host}}/api/comments/1/
+####
+DELETE http://{{host}}/api/comments/1/
